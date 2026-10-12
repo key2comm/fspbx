@@ -18,6 +18,7 @@ use App\Http\Controllers\BasicQueueController;
 use App\Http\Controllers\BusinessHoursController;
 use App\Http\Controllers\FlagsController;
 use App\Http\Controllers\PcapsController;
+use App\Http\Controllers\PagingGroupsController;
 use App\Http\Controllers\BridgeController;
 use App\Http\Controllers\CallBlockController;
 use App\Http\Controllers\CallWebhookController;
@@ -351,6 +352,14 @@ Route::group(['middleware' => ['auth:sanctum', 'api.cookie.auth']], function () 
     Route::post('pcaps/bulk-stop', [PcapsController::class, 'bulkStop'])->name('pcaps.bulk.stop');
     Route::post('pcaps/bulk-delete', [PcapsController::class, 'bulkDelete'])->name('pcaps.bulk.delete');
     Route::get('pcaps/{session}/captures', [PcapsController::class, 'captures'])->name('pcaps.captures');
+    // Paging groups
+    Route::get('paging-groups/data', [PagingGroupsController::class, 'getData'])->name('paging-groups.data');
+    Route::post('paging-groups', [PagingGroupsController::class, 'store'])->name('paging-groups.store');
+    Route::put('paging-groups/{paging_group}', [PagingGroupsController::class, 'update'])->name('paging-groups.update');
+    Route::post('paging-groups/item-options', [PagingGroupsController::class, 'getItemOptions'])->name('paging-groups.item.options');
+    Route::post('paging-groups/select-all', [PagingGroupsController::class, 'selectAll'])->name('paging-groups.select.all');
+    Route::post('paging-groups/bulk-delete', [PagingGroupsController::class, 'bulkDelete'])->name('paging-groups.bulk.delete');
+    Route::post('paging-groups/bulk-toggle', [PagingGroupsController::class, 'bulkToggle'])->name('paging-groups.bulk.toggle');
 
     // Holiday Hours
     Route::resource('/holiday-hours', HolidayHoursController::class);

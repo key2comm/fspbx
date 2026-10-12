@@ -12,6 +12,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\BusinessHoursController;
 use App\Http\Controllers\FlagsController;
 use App\Http\Controllers\PcapsController;
+use App\Http\Controllers\PagingGroupsController;
 use App\Http\Controllers\BridgeController;
 use App\Http\Controllers\BasicDialerController;
 use App\Http\Controllers\BasicQueueController;
@@ -296,6 +297,8 @@ Route::group(['middleware' => 'auth'], function () {
     // PCAPs
     Route::get('pcaps', [PcapsController::class, 'index'])->name('pcaps.index');
     Route::get('pcaps/captures/{capture}/download', [PcapsController::class, 'download'])->name('pcaps.captures.download');
+    // Paging groups
+    Route::get('paging-groups', [PagingGroupsController::class, 'index'])->name('paging-groups.index');
 
     // Bridges
     Route::get('bridges', [BridgeController::class, 'index'])->name('bridges.index');
