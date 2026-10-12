@@ -11,6 +11,7 @@ use App\Http\Controllers\AppsCredentialsController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\BusinessHoursController;
 use App\Http\Controllers\FlagsController;
+use App\Http\Controllers\PcapsController;
 use App\Http\Controllers\BridgeController;
 use App\Http\Controllers\BasicDialerController;
 use App\Http\Controllers\BasicQueueController;
@@ -292,6 +293,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     // Flags
     Route::get('flags', [FlagsController::class, 'index'])->name('flags.index');
+    // PCAPs
+    Route::get('pcaps', [PcapsController::class, 'index'])->name('pcaps.index');
+    Route::get('pcaps/captures/{capture}/download', [PcapsController::class, 'download'])->name('pcaps.captures.download');
 
     // Bridges
     Route::get('bridges', [BridgeController::class, 'index'])->name('bridges.index');

@@ -17,6 +17,7 @@ use App\Http\Controllers\Api\ProvisioningTemplateController;
 use App\Http\Controllers\BasicQueueController;
 use App\Http\Controllers\BusinessHoursController;
 use App\Http\Controllers\FlagsController;
+use App\Http\Controllers\PcapsController;
 use App\Http\Controllers\BridgeController;
 use App\Http\Controllers\CallBlockController;
 use App\Http\Controllers\CallWebhookController;
@@ -343,6 +344,13 @@ Route::group(['middleware' => ['auth:sanctum', 'api.cookie.auth']], function () 
     Route::post('flags/select-all', [FlagsController::class, 'selectAll'])->name('flags.select.all');
     Route::post('flags/bulk-delete', [FlagsController::class, 'bulkDelete'])->name('flags.bulk.delete');
     Route::post('flags/bulk-toggle', [FlagsController::class, 'bulkToggle'])->name('flags.bulk.toggle');
+    // PCAPs
+    Route::get('pcaps/data', [PcapsController::class, 'getData'])->name('pcaps.data');
+    Route::post('pcaps', [PcapsController::class, 'store'])->name('pcaps.store');
+    Route::post('pcaps/item-options', [PcapsController::class, 'getItemOptions'])->name('pcaps.item.options');
+    Route::post('pcaps/bulk-stop', [PcapsController::class, 'bulkStop'])->name('pcaps.bulk.stop');
+    Route::post('pcaps/bulk-delete', [PcapsController::class, 'bulkDelete'])->name('pcaps.bulk.delete');
+    Route::get('pcaps/{session}/captures', [PcapsController::class, 'captures'])->name('pcaps.captures');
 
     // Holiday Hours
     Route::resource('/holiday-hours', HolidayHoursController::class);
