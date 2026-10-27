@@ -5717,5 +5717,11 @@
     "“Instead of waiting on the line, you can keep your place in line and receive a callback. To have us call you back, press :key.”": "“Em vez de esperar na linha, você pode manter seu lugar na fila e receber um retorno. Para que possamos ligar de volta, pressione :key.”",
     "✗ missing": "✗ ausente",
     "Leave blank to keep the saved token.": "Deixe em branco para manter o token salvo.",
-    "Enable Homer API Integration": "Ativar integração com a API do Homer"
+    "Enable Homer API Integration": "Ativar integração com a API do Homer",
+    "Choose where to send calls.": "",
+    "Each flag can only be used once when active and once when inactive.": "",
+    "Send Calls To": "",
+    "Send calls somewhere else while a flag is active or inactive. The first matching row wins; drag rows to change the order. When no row matches, callers hear the menu as normal.": "",
+    "Send calls somewhere else while a flag is active or inactive. The first matching row wins; drag rows to change the order. When no row matches, calls ring as normal.": "",
+    "When the Flag Is": ""
 }
