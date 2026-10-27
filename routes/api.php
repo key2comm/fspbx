@@ -17,7 +17,10 @@ use App\Http\Controllers\Api\ProvisioningTemplateController;
 use App\Http\Controllers\BasicQueueController;
 use App\Http\Controllers\BusinessHoursController;
 use App\Http\Controllers\FlagsController;
+<<<<<<< HEAD
 use App\Http\Controllers\PcapsController;
+=======
+>>>>>>> pr-649
 use App\Http\Controllers\PagingGroupsController;
 use App\Http\Controllers\BridgeController;
 use App\Http\Controllers\CallBlockController;
@@ -349,6 +352,7 @@ Route::group(['middleware' => ['auth:sanctum', 'api.cookie.auth']], function () 
     Route::post('flags/select-all', [FlagsController::class, 'selectAll'])->name('flags.select.all');
     Route::post('flags/bulk-delete', [FlagsController::class, 'bulkDelete'])->name('flags.bulk.delete');
     Route::post('flags/bulk-toggle', [FlagsController::class, 'bulkToggle'])->name('flags.bulk.toggle');
+<<<<<<< HEAD
     // PCAPs
     Route::get('pcaps/data', [PcapsController::class, 'getData'])->name('pcaps.data');
     Route::post('pcaps', [PcapsController::class, 'store'])->name('pcaps.store');
@@ -356,6 +360,8 @@ Route::group(['middleware' => ['auth:sanctum', 'api.cookie.auth']], function () 
     Route::post('pcaps/bulk-stop', [PcapsController::class, 'bulkStop'])->name('pcaps.bulk.stop');
     Route::post('pcaps/bulk-delete', [PcapsController::class, 'bulkDelete'])->name('pcaps.bulk.delete');
     Route::get('pcaps/{session}/captures', [PcapsController::class, 'captures'])->name('pcaps.captures');
+=======
+>>>>>>> pr-649
     // Paging groups
     Route::get('paging-groups/data', [PagingGroupsController::class, 'getData'])->name('paging-groups.data');
     Route::post('paging-groups', [PagingGroupsController::class, 'store'])->name('paging-groups.store');

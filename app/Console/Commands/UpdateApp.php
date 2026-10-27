@@ -64,6 +64,10 @@ use App\Console\Commands\Updates\Update208;
 use App\Console\Commands\Updates\Update209;
 use App\Console\Commands\Updates\Update210;
 use App\Console\Commands\Updates\Update211;
+<<<<<<< HEAD
+=======
+use App\Console\Commands\Updates\Update212;
+>>>>>>> pr-649
 use App\Console\Commands\Updates\Update0917;
 use App\Console\Commands\Updates\Update0918;
 use App\Console\Commands\Updates\Update0924;
@@ -205,6 +209,10 @@ class UpdateApp extends Command
             '2.0.9' => Update209::class,
             '2.1.0' => Update210::class,
             '2.1.1' => Update211::class,
+<<<<<<< HEAD
+=======
+            '2.1.2' => Update212::class,
+>>>>>>> pr-649
             // Add more versions as needed
         ];
 

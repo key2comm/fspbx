@@ -11,7 +11,10 @@ use App\Http\Controllers\AppsCredentialsController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\BusinessHoursController;
 use App\Http\Controllers\FlagsController;
+<<<<<<< HEAD
 use App\Http\Controllers\PcapsController;
+=======
+>>>>>>> pr-649
 use App\Http\Controllers\PagingGroupsController;
 use App\Http\Controllers\BridgeController;
 use App\Http\Controllers\BasicDialerController;
@@ -295,9 +298,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     // Flags
     Route::get('flags', [FlagsController::class, 'index'])->name('flags.index');
+<<<<<<< HEAD
     // PCAPs
     Route::get('pcaps', [PcapsController::class, 'index'])->name('pcaps.index');
     Route::get('pcaps/captures/{capture}/download', [PcapsController::class, 'download'])->name('pcaps.captures.download');
+=======
+>>>>>>> pr-649
     // Paging groups
     Route::get('paging-groups', [PagingGroupsController::class, 'index'])->name('paging-groups.index');
 

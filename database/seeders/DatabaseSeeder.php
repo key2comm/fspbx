@@ -151,11 +151,14 @@ class DatabaseSeeder extends Seeder
             ['application_name' => 'Flags', 'permission_name' => 'flags_update'],
             ['application_name' => 'Flags', 'permission_name' => 'flags_delete'],
             ['application_name' => 'Flags', 'permission_name' => 'flags_toggle'],
+<<<<<<< HEAD
             ['application_name' => 'PCAPs', 'permission_name' => 'pcap_list_view'],
             ['application_name' => 'PCAPs', 'permission_name' => 'pcap_create'],
             ['application_name' => 'PCAPs', 'permission_name' => 'pcap_stop'],
             ['application_name' => 'PCAPs', 'permission_name' => 'pcap_delete'],
             ['application_name' => 'PCAPs', 'permission_name' => 'pcap_download'],
+=======
+>>>>>>> pr-649
             ['application_name' => 'Paging Groups', 'permission_name' => 'paging_groups_list_view'],
             ['application_name' => 'Paging Groups', 'permission_name' => 'paging_groups_create'],
             ['application_name' => 'Paging Groups', 'permission_name' => 'paging_groups_update'],
@@ -347,11 +350,14 @@ class DatabaseSeeder extends Seeder
                 'flags_update',
                 'flags_delete',
                 'flags_toggle',
+<<<<<<< HEAD
                 'pcap_list_view',
                 'pcap_create',
                 'pcap_stop',
                 'pcap_delete',
                 'pcap_download',
+=======
+>>>>>>> pr-649
                 'paging_groups_list_view',
                 'paging_groups_create',
                 'paging_groups_update',
@@ -488,11 +494,14 @@ class DatabaseSeeder extends Seeder
                 'flags_update',
                 'flags_delete',
                 'flags_toggle',
+<<<<<<< HEAD
                 'pcap_list_view',
                 'pcap_create',
                 'pcap_stop',
                 'pcap_delete',
                 'pcap_download',
+=======
+>>>>>>> pr-649
                 'paging_groups_list_view',
                 'paging_groups_create',
                 'paging_groups_update',
